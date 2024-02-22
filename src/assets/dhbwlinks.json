@@ -1,0 +1,26 @@
+[
+    {
+        "link": "https://elearning.dhbw-stuttgart.de/moodle/my/courses.php",
+        "text": "Moodle"
+    },
+    {
+        "link": "https://dualis.dhbw.de/scripts/mgrqispi.dll?APPNAME=CampusNet&PRGNAME=EXTERNALPAGES&ARGUMENTS=-N000000000000001,-N000324,-Awelcome", 
+        "text": "Dualis"
+    },
+    {
+        "link": "https://rapla.dhbw.de/rapla/internal_calendar?key=6Q0QSbNtpyeYPKQhnGFTaEN6AggaPdGgCFyhd5ANmjydX8WyDjUfLBh4YjDgat2dJd8as6Az5GGmQilBwJydDahhHroOQIPJaRqDM08XMobXMSGfsGtP4flVnON8wy0Y&salt=648736798&prev=%3C%3C&day=18&month=9&year=2023&today=Heute&pages=1", 
+        "text": "Vorlesungsplan (Rapla)"
+    },
+    {
+        "link": "https://www.dhbw-stuttgart.de/fileadmin/dateien/Semesterplaene/Technik/2022_Informatik.pdf",
+        "text": "Studienverlaufsplan"
+    },
+    {
+        "link": "https://www.dhbw.de/fileadmin/user/public/SP/STG/Informatik/Informatik.pdf",
+        "text": "Modulhandbuch"
+    },
+    {
+        "link": "https://lehre-webmail.dhbw-stuttgart.de/roundcubemail/?_task=mail&_mbox=INBOX",
+        "text": "roundcube"
+    }
+]
