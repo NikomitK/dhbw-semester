@@ -1,0 +1,11 @@
+<div class="panel">
+    <div class="heading">
+        <h2>{{caption}}</h2>
+        <button mat-stroked-button (click)="toggleCollapsed()">{{collapsed ? "expand" : "collapse"}}</button>
+    </div>
+    @if (!collapsed) {
+        @for (link of links; track $index) {
+            <a mat-raised-button [href]="link.url"><div class="btn-text">{{link.text}}</div></a>
+        }
+    }
+</div>

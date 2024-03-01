@@ -1,1 +1,17 @@
-<app-courses></app-courses>
+<ng-particles
+  [id]="id"
+  [options]="particlesOptions"
+  [particlesInit]="particlesInit"
+  (particlesLoaded)="particlesLoaded($event)"
+></ng-particles>
+
+<router-outlet></router-outlet>
+
+<div class="container">
+  <app-link-list filename="courselinks.json" caption="Vorlesungen/Kurse" class="panel"></app-link-list>
+
+  <app-link-list filename="dhbwlinks.json" caption="Andere DHBW Seiten"></app-link-list>
+  
+  <app-link-list filename="githublinks.json" caption="GitHub etc."></app-link-list>
+</div>
+

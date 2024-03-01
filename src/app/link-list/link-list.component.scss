@@ -1,0 +1,38 @@
+$layout-breakpoint-small: 960px;
+
+
+.panel {
+    background: rgba(255, 255, 255, 0.4) !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+@media (min-width: $layout-breakpoint-small) {
+    .panel{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    grid-column-start: span 2;
+}
+
+.btn-text {
+    text-align: center;
+}

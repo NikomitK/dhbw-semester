@@ -22,5 +22,9 @@
     {
         "link": "https://lehre-webmail.dhbw-stuttgart.de/roundcubemail/?_task=mail&_mbox=INBOX",
         "text": "roundcube"
+    },
+    {
+        "link": "https://it.dhbw-stuttgart.de/DHermine/termedit.php?page=tlist",
+        "text": "DHBW Terminliste"
     }
 ]
