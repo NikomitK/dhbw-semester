@@ -10,7 +10,7 @@
     "test": "ng test --watch=false --browsers=ChromeHeadlessCustom",
     "test:watch": "ng test",
     "inst": "ng add",
-    "build:prod": "ng build --omit=dev",
+    "build:prod": "ng build",
     "build:ci": "npm run clean && npm run build:prod"
   },
   "private": true,
