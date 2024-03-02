@@ -1,0 +1,1 @@
+import{d as a}from"./chunk-TMC7WMLO.js";function t(e,o=!0){return a(this,null,function*(){yield e.addMover("base",()=>a(this,null,function*(){let{BaseMover:r}=yield import("./chunk-B5V2IHJ6.js");return new r}),o)})}export{t as loadBaseMover};

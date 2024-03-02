@@ -1,0 +1,1 @@
+import{a as n}from"./chunk-CQ2LDW3K.js";import{d as t}from"./chunk-TMC7WMLO.js";function c(r,o=!0){return t(this,null,function*(){yield r.addInteractor("externalSlow",e=>t(this,null,function*(){let{Slower:a}=yield import("./chunk-F76JG3LX.js");return new a(e)}),o)})}export{n as Slow,c as loadExternalSlowInteraction};

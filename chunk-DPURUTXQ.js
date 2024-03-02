@@ -1,0 +1,1 @@
+import{d as n}from"./chunk-TMC7WMLO.js";function l(i,a=!0){return n(this,null,function*(){let{LinksPlugin:t}=yield import("./chunk-JGFAN56G.js"),u=new t;yield i.addPlugin(u,a)})}export{l as loadLinksPlugin};

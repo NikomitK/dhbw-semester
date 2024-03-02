@@ -1,0 +1,1 @@
+import{a,b as c}from"./chunk-Q6AB2CPB.js";import{d as t}from"./chunk-TMC7WMLO.js";function x(o,r=!0){return t(this,null,function*(){yield o.addInteractor("externalConnect",e=>t(this,null,function*(){let{Connector:n}=yield import("./chunk-2XK5H7U5.js");return new n(e)}),r)})}export{c as Connect,a as ConnectLinks,x as loadExternalConnectInteraction};
