@@ -3,21 +3,20 @@ import { Link } from '../linkdata/link';
 import { LinkdataService } from '../linkdata/linkdata.service';
 import { MatButtonModule } from '@angular/material/button';
 import { OnInit } from '@angular/core';
-import * as courselinks from '../../assets/courselinks.json';
-import { HttpClient } from '@angular/common/http';
-import { JsonPipe } from '@angular/common';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-link-list',
   standalone: true,
   imports: [MatButtonModule],
   templateUrl: './link-list.component.html',
-  styleUrl: './link-list.component.scss'
+  styleUrl: './link-list.component.scss',
+  providers: [CookieService]
 })
 export class LinkListComponent implements OnInit{
 
   @Input()
-  filename?: String;
+  filename?: string;
 
   @Input()
   caption?: String;
@@ -30,16 +29,21 @@ export class LinkListComponent implements OnInit{
     { url: '', text: 'course3' }
   ];
 
-  constructor(private linkdataService: LinkdataService, private http: HttpClient) { }
+  constructor(private linkdataService: LinkdataService, private cookieService: CookieService) { }
 
 
   ngOnInit(): void {
     if(this.filename) {
       this.linkdataService.getLinks(this.filename).subscribe(data => this.links = data)
     }
+    if(this.filename) {
+      this.collapsed = this.cookieService.get(this.filename) === 'true';
+    }
+    
   }
 
   toggleCollapsed(){
     this.collapsed = !this.collapsed;
+    this.cookieService.set(this.filename!, this.collapsed.toString());
   }
 }
