@@ -1,41 +1,41 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LinkListComponent } from './link-list/link-list.component';
-import { ClickMode, Container, Engine, HoverMode, MoveDirection, OutMode } from 'tsparticles-engine';
-import { loadSlim } from "tsparticles-slim";
-import { NgParticlesModule } from 'ng-particles';
+import {
+  MoveDirection, OutMode, Engine, ISourceOptions} from "@tsparticles/engine";
+import { loadSlim } from "@tsparticles/slim";
+import { NgxParticlesModule, NgParticlesService } from '@tsparticles/angular';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LinkListComponent, NgParticlesModule],
+  imports: [RouterOutlet, LinkListComponent, NgxParticlesModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  constructor(private readonly ngParticlesService: NgParticlesService) { }
+
+  ngOnInit(): void {
+    void this.ngParticlesService.init(async (engine: Engine) => {
+      console.log("init", engine);
+
+      await loadSlim(engine);
+    });
+  }
   title = 'dhbw-semester';
-  
+
   id = "tsparticles";
 
-  particlesOptions = {
+  particlesOptions: ISourceOptions = {
     background: {
       color: {
-        value: "#949494",
+        value: "#ffffff",
       },
     },
     fpsLimit: 120,
     interactivity: {
-      events: {
-        onClick: {
-          enable: true,
-          mode: ClickMode.push,
-        },
-        onHover: {
-          enable: true,
-          mode: HoverMode.repulse,
-        },
-        resize: true,
-      },
       modes: {
         push: {
           quantity: 4,
@@ -48,10 +48,10 @@ export class AppComponent {
     },
     particles: {
       color: {
-        value: "#ffffff",
+        value: "#E30613",
       },
       links: {
-        color: "#ffffff",
+        color: "#E30613",
         distance: 150,
         enable: true,
         opacity: 0.5,
@@ -64,18 +64,17 @@ export class AppComponent {
           default: OutMode.bounce,
         },
         random: false,
-        speed: 2.75,
+        speed: 6,
         straight: false,
       },
       number: {
         density: {
-          enable: true,
-          area: 800,
+          enable: true
         },
-        value: 80,
+        value: 120,
       },
       opacity: {
-        value: 0.5,
+        value: 0.9,
       },
       shape: {
         type: "circle",
@@ -87,17 +86,4 @@ export class AppComponent {
     detectRetina: true,
   };
 
-  particlesLoaded(container: Container): void {
-    console.log(container);
-  }
-
-  async particlesInit(engine: Engine): Promise<void> {
-    console.log(engine);
-
-    // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    //await loadFull(engine);
-    await loadSlim(engine);
-  }
 }
