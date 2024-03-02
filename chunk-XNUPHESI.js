@@ -1,1 +1,0 @@
-import{d as a}from"./chunk-TMC7WMLO.js";function n(e,r=!0){return a(this,null,function*(){let{SquareDrawer:t}=yield import("./chunk-S3D3Y54P.js");yield e.addShape(["edge","square"],new t,r)})}export{n as loadSquareShape};

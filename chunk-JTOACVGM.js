@@ -1,1 +1,0 @@
-import"./chunk-C53CAAUH.js";import{s as i}from"./chunk-KQE4NFFQ.js";import{d as o}from"./chunk-TMC7WMLO.js";function n(){return o(this,null,function*(){i("ease-in-quad",a=>a**2),i("ease-out-quad",a=>1-(1-a)**2),i("ease-in-out-quad",a=>a<.5?2*a**2:1-(-2*a+2)**2/2),yield Promise.resolve()})}export{n as loadEasingQuadPlugin};

@@ -1,1 +1,0 @@
-import{a as n}from"./chunk-BHFH4F3M.js";import"./chunk-C53CAAUH.js";import"./chunk-KQE4NFFQ.js";import{d as e}from"./chunk-TMC7WMLO.js";function c(t,r=!0){return e(this,null,function*(){yield t.addInteractor("externalRemove",o=>e(this,null,function*(){let{Remover:a}=yield import("./chunk-3GF2IHMS.js");return new a(o)}),r)})}export{n as Remove,c as loadExternalRemoveInteraction};

@@ -1,1 +1,0 @@
-import{d as n}from"./chunk-TMC7WMLO.js";function e(t,a=!0){return n(this,null,function*(){yield t.addInteractor("particlesLinks",r=>n(this,null,function*(){let{Linker:i}=yield import("./chunk-MLGQ5NEN.js");return new i(r)}),a)})}export{e as loadLinksInteraction};

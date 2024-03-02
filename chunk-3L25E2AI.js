@@ -1,1 +1,0 @@
-import{d as a}from"./chunk-TMC7WMLO.js";function t(e,n=!0){return a(this,null,function*(){let{LineDrawer:i}=yield import("./chunk-6A7ZLK7C.js");yield e.addShape("line",new i,n)})}export{t as loadLineShape};

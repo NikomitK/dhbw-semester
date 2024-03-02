@@ -1,1 +1,0 @@
-import{d as t}from"./chunk-TMC7WMLO.js";function e(a,r=!0){return t(this,null,function*(){yield a.addInteractor("particlesAttract",c=>t(this,null,function*(){let{Attractor:n}=yield import("./chunk-NEWITNPG.js");return new n(c)}),r)})}export{e as loadParticlesAttractInteraction};

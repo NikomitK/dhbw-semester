@@ -1,1 +1,0 @@
-import{a as o}from"./chunk-AC74XWRR.js";import"./chunk-C53CAAUH.js";import"./chunk-KQE4NFFQ.js";import{d as t}from"./chunk-TMC7WMLO.js";function c(r,e=!0){return t(this,null,function*(){yield r.addInteractor("externalPush",a=>t(this,null,function*(){let{Pusher:n}=yield import("./chunk-WC57KDY3.js");return new n(a)}),e)})}export{o as Push,c as loadExternalPushInteraction};
