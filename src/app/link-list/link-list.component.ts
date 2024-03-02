@@ -35,10 +35,8 @@ export class LinkListComponent implements OnInit{
 
   ngOnInit(): void {
     if(this.filename) {
-      //this.linkdataService.getLinks(this.filename).subscribe(data => this.links = data)
-      this.linkdataService.getLocalLinks(this.filename).subscribe(data => this.links = data)
+      this.linkdataService.getLinks(this.filename).subscribe(data => this.links = data)
     }
-    //console.log(courselinks);
   }
 
   toggleCollapsed(){
