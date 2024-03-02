@@ -20,20 +20,12 @@ export class AppComponent {
   particlesOptions = {
     background: {
       color: {
-        value: "#949494",
+        value: "#ffffff",
       },
     },
     fpsLimit: 120,
     interactivity: {
       events: {
-        onClick: {
-          enable: true,
-          mode: ClickMode.push,
-        },
-        onHover: {
-          enable: true,
-          mode: HoverMode.repulse,
-        },
         resize: true,
       },
       modes: {
@@ -48,10 +40,10 @@ export class AppComponent {
     },
     particles: {
       color: {
-        value: "#ffffff",
+        value: "#E30613",
       },
       links: {
-        color: "#ffffff",
+        color: "#E30613",
         distance: 150,
         enable: true,
         opacity: 0.5,
@@ -72,10 +64,10 @@ export class AppComponent {
           enable: true,
           area: 800,
         },
-        value: 80,
+        value: 120,
       },
       opacity: {
-        value: 0.5,
+        value: 0.9,
       },
       shape: {
         type: "circle",
