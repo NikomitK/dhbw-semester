@@ -26,5 +26,9 @@
     {
         "url": "https://it.dhbw-stuttgart.de/DHermine/termedit.php?page=tlist",
         "text": "DHBW Terminliste"
+    },
+    {
+        "url": "https://elearning.dhbw-stuttgart.de/moodle/course/view.php?id=18429",
+        "text": "T2000 Kurs"
     }
 ]
