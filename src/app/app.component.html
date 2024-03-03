@@ -1,17 +1,14 @@
-<ng-particles
-  [id]="id"
-  [options]="particlesOptions"
-  [particlesInit]="particlesInit"
-  (particlesLoaded)="particlesLoaded($event)"
-></ng-particles>
+<ng-particles [id]="id" [options]="particlesOptions" [particlesInit]="particlesInit"
+    (particlesLoaded)="particlesLoaded($event)"></ng-particles>
 
-<router-outlet></router-outlet>
+  <div class="container">
+    <app-link-list filename="courselinks.json" caption="Vorlesungen/Kurse" class="panel" [darkmode]="isDarkmode"></app-link-list>
 
-<div class="container">
-  <app-link-list filename="courselinks.json" caption="Vorlesungen/Kurse" class="panel"></app-link-list>
+    <app-link-list filename="dhbwlinks.json" caption="Andere DHBW Seiten" [darkmode]="isDarkmode"></app-link-list>
 
-  <app-link-list filename="dhbwlinks.json" caption="Andere DHBW Seiten"></app-link-list>
+    <app-link-list filename="githublinks.json" caption="GitHub etc." [darkmode]="isDarkmode"></app-link-list>
+  </div>
   
-  <app-link-list filename="githublinks.json" caption="GitHub etc."></app-link-list>
-</div>
-
+  <div class="dark-mode-container">
+    <button mat-stroked-button (click)="toggleDarkMode()">{{isDarkmode ? 'Lightmode' : 'Darkmode'}}</button>
+  </div>

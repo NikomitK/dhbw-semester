@@ -1,27 +1,42 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { LinkListComponent } from './link-list/link-list.component';
-import { ClickMode, Container, Engine, HoverMode, MoveDirection, OutMode } from 'tsparticles-engine';
+import { Container, Engine, MoveDirection, OutMode } from 'tsparticles-engine';
 import { loadSlim } from "tsparticles-slim";
 import { NgParticlesModule } from 'ng-particles';
+import { MatButtonModule } from '@angular/material/button';
+import { CookieService } from 'ngx-cookie-service';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LinkListComponent, NgParticlesModule],
+  imports: [RouterOutlet, LinkListComponent, NgParticlesModule, MatButtonModule],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  providers: [CookieService]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'dhbw-semester';
+  
+  constructor(private elementRef: ElementRef, private cookieService: CookieService) {}
+
+  ngOnInit(): void {
+    this.isDarkmode = this.cookieService.get('darkmode') === 'true';
+    this.elementRef.nativeElement.ownerDocument
+    .body.style.backgroundColor = this.isDarkmode ? this.darkmodeColor : this.lightmodeColor;
+  }
+
+  darkmodeColor = "#5d686e"
+  lightmodeColor = "#f0f0f0"
+
+  isDarkmode = false;
   
   id = "tsparticles";
 
+
   particlesOptions = {
     background: {
-      color: {
-        value: "#ffffff",
-      },
     },
     fpsLimit: 120,
     interactivity: {
@@ -85,11 +100,13 @@ export class AppComponent {
 
   async particlesInit(engine: Engine): Promise<void> {
     console.log(engine);
-
-    // Starting from 1.19.0 you can add custom presets or shape here, using the current tsParticles instance (main)
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    //await loadFull(engine);
     await loadSlim(engine);
+  }
+
+  toggleDarkMode(){
+    this.isDarkmode = !this.isDarkmode;
+    this.cookieService.set('darkmode', this.isDarkmode.toString());
+    this.elementRef.nativeElement.ownerDocument
+    .body.style.backgroundColor = this.isDarkmode ? this.darkmodeColor : this.lightmodeColor;
   }
 }

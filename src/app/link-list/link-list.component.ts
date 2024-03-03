@@ -4,11 +4,12 @@ import { LinkdataService } from '../linkdata/linkdata.service';
 import { MatButtonModule } from '@angular/material/button';
 import { OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-link-list',
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, CommonModule],
   templateUrl: './link-list.component.html',
   styleUrl: './link-list.component.scss',
   providers: [CookieService]
@@ -22,6 +23,9 @@ export class LinkListComponent implements OnInit{
   caption?: String;
 
   collapsed: boolean = false;
+
+  @Input()
+  darkmode: boolean = false;
   
   links: Link[] = [
     { url: '', text: 'course1' },
@@ -30,7 +34,6 @@ export class LinkListComponent implements OnInit{
   ];
 
   constructor(private linkdataService: LinkdataService, private cookieService: CookieService) { }
-
 
   ngOnInit(): void {
     if(this.filename) {

@@ -1,6 +1,5 @@
 $layout-breakpoint-small: 960px;
 
-
 .panel {
     background: rgba(93, 104, 110, 0.4) !important;
     width: 100%;
@@ -35,4 +34,12 @@ h2 {
 
 .btn-text {
     text-align: center;
+}
+
+.panel-darkmode {
+    background-color: rgba(155, 165, 170, 0.4) !important;
+}
+
+.btn-darkmode {
+    background-color: rgba(93, 104, 110, 0.8) !important;
 }
