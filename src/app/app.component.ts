@@ -105,7 +105,7 @@ export class AppComponent implements OnInit{
 
   toggleDarkMode(){
     this.isDarkmode = !this.isDarkmode;
-    this.cookieService.set('darkmode', this.isDarkmode.toString());
+    this.cookieService.set('darkmode', this.isDarkmode.toString(), {expires: 365});
     this.elementRef.nativeElement.ownerDocument
     .body.style.backgroundColor = this.isDarkmode ? this.darkmodeColor : this.lightmodeColor;
   }

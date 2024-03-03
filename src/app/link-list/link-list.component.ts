@@ -47,6 +47,6 @@ export class LinkListComponent implements OnInit{
 
   toggleCollapsed(){
     this.collapsed = !this.collapsed;
-    this.cookieService.set(this.filename!, this.collapsed.toString());
+    this.cookieService.set(this.filename!, this.collapsed.toString(), {expires: 365});
   }
 }
