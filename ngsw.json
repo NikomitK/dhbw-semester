@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1709565131268,
+  "timestamp": 1709648320285,
   "index": "/dhbw-semester/index.html",
   "assetGroups": [
     {
@@ -47,7 +47,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/dhbw-semester/assets/courselinks.json": "aae66d705beec44f88e623a6706489c551b583ec",
+    "/dhbw-semester/assets/courselinks.json": "a7a7b81474d5a473a30c712124f38a0387e60483",
     "/dhbw-semester/assets/dhbwlinks.json": "fefecaa43596d5111cb3eb8202fd9ae796def931",
     "/dhbw-semester/assets/githublinks.json": "e6f70aa84bf12b7f8ab69bbbaf2b177f382b05a2",
     "/dhbw-semester/assets/icons/icon-128x128.png": "082b5a50e3af60f2e3d596efc860f59a2ae2eef6",
