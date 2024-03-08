@@ -37,4 +37,4 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist/dhbw-semester/browser # The folder the action should deploy.
+          folder: SOURCE/ecad-topologie-editor/dist/dhbw-semester/browser # The folder the action should deploy.
